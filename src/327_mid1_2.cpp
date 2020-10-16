@@ -20,11 +20,11 @@ namespace KP{
 	//TODO 5 pts define function
 	/**
 	 * counts and returns the number of people with the name personname in fvec
-	 * @param pvec: a vector that holds person structs
-	 *        prsnname: a persons name
-	 * @return the number people with the name prsnname
+	 * @param prsnvec: a vector that holds person structs
+	 *        pname: a persons name
+	 * @return the number people with the name pname
 	 */
-	int getcount(vector<person> &pvec,std::string &prsnname);
+	int getcount(vector<person> &prsnvec,std::string &pname);
 
 
 	//TODO 5 pts define function
@@ -38,19 +38,19 @@ namespace KP{
 	//TODO 10 pts define function
 	/**
 	 * tries to open file fn, read 1 line from it, and return this line
-	 * @param fn  filename where a name should be, file may not be present
+	 * @param fnme  filename where a name should be, file may not be present
 	 * @return the contents of the file, or an empty string if file not found
 	 */
-	std::string readfile(const std::string &fn=FILENAME);
+	std::string readfile(const std::string &fnme=FILENAME);
 
 	//TODO 10 pts create a function
 	/**
-	 * tries to open file fn, write info to it
-	 * @param info what to write to the file
-	 * @param sfn  filename where a name should be, file may not be present
-	 * @return the contents of the file, or an empty string if file not found
+	 * tries to open file fnme, write data to it
+	 * @param data what to write to the file
+	 * @param fnme  filename where a name should be, file may not be present
+	 * @return true if it worked, false otherwise
 	 */
-	bool writefile(std::string &info, const std::string &fn=FILENAME);
+	bool writefile(std::string &data, const std::string &fnme=FILENAME);
 }
 
 //NOTE please do not modify anything in main
